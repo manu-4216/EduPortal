@@ -8,7 +8,7 @@ const questions = {
         "Fac experimente si deduc observatii",
         "Sfatuiesc oameni despre un mod de viata sanatos",
         "Incep o afacere", // 5
-        "Studiezsi aflu mai multe despre sistemul legal",
+        "Studiez si aflu mai multe despre sistemul legal",
         "Studiez si aflu mai multe despre etapele dezvoltarii unei afaceri",
         "Studiez limbaje de programare pe calculator",
         "Am grija de oameni, chiar si straini",
