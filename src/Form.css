@@ -1,0 +1,55 @@
+.Form {
+    font-size: 100%;
+    max-width: 30em;
+    margin: auto;
+}
+
+.question {
+    text-align: left;
+    font-size: 100%;
+    margin-bottom: 0.2em;
+    margin-left: 1em;
+}
+
+.options-group {
+}
+
+.option {
+    display: block;
+    text-align: left;
+    margin-left: 4em;
+}
+
+.submit-button {
+    font-size: 90%;
+    margin: 1em auto 1em auto;
+}
+
+.error {
+    color: red;
+    padding: 1em;
+}
+
+.points {
+    margin: 2.6em;
+    text-align: left;
+}
+
+.field {
+    margin: 1.5em auto;
+    max-width: 45em;
+}
+
+.field-title {
+    color: crimson;
+    font-size: 120%;
+    font-weight: 400;
+}
+
+.field-more {
+    font-size: 100%;
+}
+
+.field-more div {
+    margin: 0.7em auto;
+}
