@@ -1,12 +1,12 @@
 # EduPortal
 
-`The go-to place for making the right education choices for you or your children`
+`The go-to place for making the right education choices for you and your children`
 
 ### User Stories:
 
 **I. Core features:**
 
-1. After filling a personality form, the user is shown his/her most suitable fields of study.
+1. After filling a personality form, the user is shown his/her most suitable fields of study. **DONE**
 
 **II. Bonus features:**
 

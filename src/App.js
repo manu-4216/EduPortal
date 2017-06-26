@@ -8,6 +8,12 @@ const intro = {
     "en": 'Answer the form to find out your professional hidden interests'
 }
 
+const hiddenCheatTest = function () {
+    document.querySelectorAll('.option:nth-of-type(1) input').forEach(function (elem, index) {
+        elem.checked = true;
+    })
+}
+
 class App extends Component {
 
     constructor (props) {
@@ -37,7 +43,7 @@ class App extends Component {
                         changeLanguage={this.changeLanguage.bind(this)}>
                     </Langs>
 
-                    <img src={logo} className="App-logo" alt="logo" />
+                    <img src={logo} className="App-logo" alt="logo" onClick={hiddenCheatTest}/>
                     <h2>
                         <div className="welcome">Welcome!</div>
                         <div>
