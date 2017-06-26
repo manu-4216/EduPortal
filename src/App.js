@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Form from './Form.js';
+import store from 'store';
 
 const intro = {
     "ro": "Raspunde la urmatorul formular pentru a-ti afla interesele profesionale ascunse",
@@ -19,8 +20,11 @@ class App extends Component {
     constructor (props) {
         super(props);
 
+        // Get from localStorage:, or default to 'en':
+        let initialLang = store.get('lang') || 'en';
+
         this.state = {
-            lang: 'en'
+            lang: initialLang
         };
     }
 
@@ -30,6 +34,9 @@ class App extends Component {
         this.setState({
             lang: lang
         });
+
+        // Save in localStorage:
+        store.set('lang', lang);
     }
 
     render() {

@@ -414,7 +414,6 @@ function calculateScore (answers, lang) {
         points[questionFieldIndex] += (3 - answerIndex); // Each favorable answer has a rating from 0 to 3
     })
 
-    console.log(points);
 
     // Transform  the points into a percentage
     var points_percent = {};
