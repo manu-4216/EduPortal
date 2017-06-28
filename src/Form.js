@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css';
+import FirebaseClient from 'firebase-client';
 
 const questions = {
     "ro": [
@@ -416,16 +417,39 @@ function calculateScore (answers, lang) {
 
 
     // Transform  the points into a percentage
-    var points_percent = {};
+    var pointsPercent = {};
     Object.keys(points).map(function(key) {
         // Only count the fields with at least one point
         if (points[key]) {
-            points_percent[key] = Math.round(points[key]/12*10000)/100; // 12 is the maximum points of a field
+            pointsPercent[key] = Math.round(points[key]/12*10000)/100; // 12 is the maximum points of a field
         }
         return;
     });
 
-    return points_percent;
+    var readablePoints = {};
+    for (var fieldIndex in pointsPercent) {
+        readablePoints[fields[lang][fieldIndex]] = pointsPercent[fieldIndex] + '%';
+    }
+
+    console.log('points_percent', readablePoints);
+
+    // Save the scores on the cloud
+    var firebase = new FirebaseClient({
+        url: "https://edu-platform.firebaseio.com",
+        auth: "AhxZRW3BgLaVukLW8fCqd4MsmNePz7moeuslmzDe" // I have nothing to hide here
+    });
+
+    var id = new Date();
+    firebase
+    .set(id, { points: readablePoints })
+    .then(function(data){
+      console.log(data);
+    })
+    .fail(function(err){
+      console.log(err);
+    });
+
+    return pointsPercent;
 }
 
 class Form extends Component {
