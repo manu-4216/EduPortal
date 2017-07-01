@@ -94,7 +94,7 @@ const options = {
     "ro": [
         "Foarte interesat",
         "Interesat",
-        "Putin interesat",
+        "Puțin interesat",
         "Neinteresat"
     ],
 
@@ -110,7 +110,7 @@ const fields = {
     "ro": [
         "Sănătate și Medicină",
         "Business și Finanțe",
-        "Tehnologie și Mass-Media",
+        "Tehnologie și Media",
         "Lege și Servicii Publice",
         "Arte și bucătar",
         "Educație",
